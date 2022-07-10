@@ -11,6 +11,8 @@ var publicaciones_routes = require('./routes/publicaciones');
 var cliente_routes = require('./routes/cliente');
 var usuario_routes = require('./routes/usuario');
 var reporte_routes = require('./routes/reporte');
+var inicioproducto_routes = require('./routes/inicioproducto')
+
 
 
 app.use(bodyParser.urlencoded({
@@ -44,7 +46,7 @@ app.use('/api', publicaciones_routes);
 app.use('/api', cliente_routes);
 app.use('/api', usuario_routes);
 app.use('/api', reporte_routes);
-
+app.use('/api', inicioproducto_routes);
 
 //EXPORTAR MODULO
 module.exports = app;
