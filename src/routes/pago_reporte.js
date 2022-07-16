@@ -1,16 +1,13 @@
 'use strict'
-
 var express = require('express');
-const { model } = require('mongoose');
+const { model} = require('mongoose');
 
-var PagoController = require('../controller/pago');
+var PagoReporteController = require('../controllers/pago_reporte');
 
 var router = express.Router();
 
-// RUTAS PARA PRODUCTOS
-router.get('/pago', PagoController.list);
-router.get('/pago/:id', PagoController.find);
-router.post('/pago/save', PagoController.save);
+//RUTA DE LOS PRODUCTOS CATEGORIA
+router.get('/reportes/pago_Report', PagoReporteController.pagoreport);
 
-// EXPORTAR RUTA
+//EXPORTAR RUTA
 module.exports = router;

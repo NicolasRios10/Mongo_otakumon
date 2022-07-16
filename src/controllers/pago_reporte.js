@@ -1,7 +1,7 @@
 'use strict'
 
-var pago = require("../database/db");
-var db = pago.db("pruebasdb");
+var pago_report = require("../database/db");
+var db = pago_report.db("pruebasdb");
 
 var controller ={
 
@@ -9,7 +9,7 @@ var controller ={
 pagoreport: function(req,res){
     console.log("-------");
     console.log("ENTRANDO A LA FUNCION pagoReport");
-    db.collection("pago").aggregate([
+    db.collection("pago_report").aggregate([
         {$group: {_id:"$genero",count: { $sun:1}}}.toArray(
             (error, datapagobygenero) =>{
                 if (error||datapagobygenero){
@@ -27,3 +27,4 @@ pagoreport: function(req,res){
     ])
 }
 }
+module.exports = controller;

@@ -11,7 +11,9 @@ var publicaciones_routes = require('./routes/publicaciones');
 var cliente_routes = require('./routes/cliente');
 var usuario_routes = require('./routes/usuario');
 var reporte_routes = require('./routes/reporte');
-var inicioproducto_routes = require('./routes/inicioproducto')
+var inicioproducto_routes = require('./routes/inicioproducto');
+var pago_routes = require('./routes/pago');
+var pago_reporte_routes = require('./routes/pago_reporte');
 
 
 
@@ -47,6 +49,9 @@ app.use('/api', cliente_routes);
 app.use('/api', usuario_routes);
 app.use('/api', reporte_routes);
 app.use('/api', inicioproducto_routes);
+app.use('/api', pago_routes);
+app.use('/api', pago_reporte_routes);
+
 
 //EXPORTAR MODULO
 module.exports = app;

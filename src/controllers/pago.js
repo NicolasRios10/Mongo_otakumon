@@ -60,6 +60,8 @@ var controller = {
                     pago.caducidad = req.body.caducidad;
                     pago.contraseña = req.body.contraseña;
                     pago.titulo = req.body.titulo;
+                    pago.genero = req.body.genero;
+                    pago.estado = req.body.estado;
                     db.collection("pago").insertOne(pago,
                         (error, result) => {
                             if (error) {
@@ -85,6 +87,8 @@ var controller = {
                     pago.caducidad = req.body.caducidad;
                     pago.contraseña = req.body.contraseña;
                     pago.titulo = req.body.titulo;
+                    pago.genero = req.body.genero;
+                    pago.estado = req.body.estado;
             console.log(pago);
             db.collection("pago").updateOne({pagoID: {$eq: parseInt(req.body.pagoID)}},
                                                 {$set: pago},
