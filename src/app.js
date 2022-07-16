@@ -13,7 +13,7 @@ var usuario_routes = require('./routes/usuario');
 var reporte_routes = require('./routes/reporte');
 var inicioproducto_routes = require('./routes/inicioproducto');
 var pago_routes = require('./routes/pago');
-var pago_reporte_routes = require('./routes/pagoReporte');
+//var pago_reporte_routes = require('./routes/pagoReporte');
 
 
 
@@ -50,7 +50,7 @@ app.use('/api', usuario_routes);
 app.use('/api', reporte_routes);
 app.use('/api', inicioproducto_routes);
 app.use('/api', pago_routes);
-app.use('/api', pago_reporte_routes);
+//app.use('/api', pago_reporte_routes);
 
 
 //EXPORTAR MODULO
