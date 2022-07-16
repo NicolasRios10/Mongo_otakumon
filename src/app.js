@@ -13,7 +13,7 @@ var usuario_routes = require('./routes/usuario');
 var reporte_routes = require('./routes/reporte');
 var inicioproducto_routes = require('./routes/inicioproducto');
 var pago_routes = require('./routes/pago');
-var pago_reporte_routes = require('./routes/pago_reporte');
+var pago_reporte_routes = require('./routes/pagoReporte');
 
 
 
