@@ -7,7 +7,7 @@ var PagoReporteController = require('../controllers/pago_reporte');
 var router = express.Router();
 
 //RUTA DE LOS PRODUCTOS CATEGORIA
-router.get('/reportes/pago_Report', PagoReporteController.pagoreport);
+router.get('/reportes/pago_report', PagoReporteController.pagoreport);
 
 //EXPORTAR RUTA
 module.exports = router;
