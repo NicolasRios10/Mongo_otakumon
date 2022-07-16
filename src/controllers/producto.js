@@ -8,7 +8,7 @@ var controller = {
     list: function (req, res) {
         console.log("-------------------------------");
         console.log("ENTRANDO A FUNCION LISTAR");
-        db.collection("productos").find().toArray(
+        db.collection("producto").find().toArray(
             (error, dataProductos) => {
                 if (error || !dataProductos) {
                     return res.status(404).send({
@@ -57,6 +57,9 @@ var controller = {
                     producto.productoID = countProductos + 1;
                     producto.descripcion = req.body.descripcion;
                     producto.precio = req.body.precio;
+                    producto.imagen = req.body.imagen;
+                    producto.categoria = req.body.categoria;
+                    producto.estado = req.body.estado;
                     db.collection("productos").insertOne(producto,
                         (error, result) => {
                             if (error) {
@@ -79,8 +82,11 @@ var controller = {
             producto.productoID = parseInt(req.body.productoID);
             producto.descripcion = req.body.descripcion;
             producto.precio = req.body.precio;
+            producto.imagen = req.body.imagen;
+            producto.categoria = req.body.categoria;
+            producto.estado = req.body.estado;
             console.log(producto);
-            db.collection("productos").updateOne({productoID: {$eq: parseInt(req.body.productoID)}},
+            db.collection("producto").updateOne({productoID: {$eq: parseInt(req.body.productoID)}},
                                                 {$set: producto},
                                                 (error, result) => {
                                                     if (error) {

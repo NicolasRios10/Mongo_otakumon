@@ -2,8 +2,8 @@
 
 var client = require("../database/db");
 var db = client.db("pruebasbd");
-
-
+// reportedeproductojs
+//copiatodoycambiaelnombre
 var controller = {
 
     //reporte de totsl de productos agrupados
